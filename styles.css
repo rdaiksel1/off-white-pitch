@@ -1,12 +1,12 @@
 :root {
-  --bg: #0b0d12;
-  --bg-2: #12151d;
-  --fg: #f4f6fb;
-  --fg-dim: #9aa3b5;
-  --accent: #5eead4;
-  --accent-2: #818cf8;
-  --danger: #fb7185;
-  --border: rgba(255, 255, 255, 0.08);
+  --bg: #f2efe9;
+  --bg-2: #e8e3d9;
+  --fg: #111111;
+  --fg-dim: #6b6558;
+  --accent: #ff6a13;
+  --accent-2: #111111;
+  --danger: #d92b2b;
+  --border: rgba(17, 17, 17, 0.12);
   --radius: 18px;
   font-size: 16px;
 }
@@ -30,10 +30,7 @@ html, body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background:
-    radial-gradient(circle at 15% 10%, rgba(94, 234, 212, 0.10), transparent 45%),
-    radial-gradient(circle at 85% 90%, rgba(129, 140, 248, 0.12), transparent 45%),
-    var(--bg);
+  background: var(--bg);
 }
 
 #slide-viewport {
@@ -114,10 +111,7 @@ h1.slide-title {
   font-weight: 700;
   margin: 0 0 1rem;
   letter-spacing: -0.02em;
-  background: linear-gradient(120deg, var(--fg) 40%, var(--accent) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--fg);
 }
 
 .subtitle {
@@ -173,10 +167,7 @@ ul.bullets li::before {
 .stat-block .stat-value {
   font-size: clamp(2.6rem, 8vw, 6rem);
   font-weight: 800;
-  background: linear-gradient(120deg, var(--accent) 20%, var(--accent-2) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--accent);
   line-height: 1;
 }
 
@@ -194,7 +185,7 @@ ul.bullets li::before {
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--bg-2);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 30px 80px rgba(17, 17, 17, 0.12);
 }
 
 .media-frame img,
@@ -241,7 +232,6 @@ ul.bullets li::before {
 
 /* Off-White brand landing slide */
 .slide--brand {
-  background: #f2efe9;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -262,8 +252,8 @@ ul.bullets li::before {
     45deg,
     #111 0px,
     #111 10px,
-    #f2efe9 10px,
-    #f2efe9 20px
+    var(--bg) 10px,
+    var(--bg) 20px
   );
 }
 
@@ -275,7 +265,7 @@ ul.bullets li::before {
   gap: 0.6rem;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 800;
-  color: #111;
+  color: var(--fg);
   text-transform: uppercase;
 }
 
@@ -288,7 +278,7 @@ ul.bullets li::before {
 .brand-year {
   font-size: clamp(1.1rem, 2.6vw, 1.8rem);
   letter-spacing: 0.3em;
-  color: #6b6558;
+  color: var(--fg-dim);
   font-weight: 600;
 }
 
@@ -307,7 +297,7 @@ ul.bullets li::before {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(17, 17, 17, 0.05);
   border: 1px solid var(--border);
   color: var(--fg);
   padding: 0.7rem 1.1rem;
@@ -320,7 +310,7 @@ ul.bullets li::before {
 }
 
 #btn-next:hover {
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(17, 17, 17, 0.1);
   transform: translateY(-1px);
 }
 
@@ -342,19 +332,4 @@ ul.bullets li::before {
   padding: 0.15rem 0.4rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-}
-
-#deck.on-brand #btn-next {
-  background: rgba(17, 17, 17, 0.06);
-  border-color: rgba(17, 17, 17, 0.15);
-  color: #111;
-}
-
-#deck.on-brand #btn-next:hover {
-  background: rgba(17, 17, 17, 0.12);
-}
-
-#deck.on-brand .key-hint {
-  color: #6b6558;
-  border-color: rgba(17, 17, 17, 0.15);
 }

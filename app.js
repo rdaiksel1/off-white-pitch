@@ -4,7 +4,6 @@
 // ---------------------------------------------------------------------------
 
 (function () {
-  const deck = document.getElementById("deck");
   const viewport = document.getElementById("slide-viewport");
   const btnNext = document.getElementById("btn-next");
 
@@ -140,7 +139,6 @@
       }
     });
 
-    deck.classList.toggle("on-brand", !!SLIDES[current].brand);
     btnNext.disabled = current === slideEls.length - 1;
   }
 
