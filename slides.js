@@ -8,8 +8,8 @@ const SLIDES = [
   {
     type: "title",
     brand: true,
-    quoted: "WATERMILL CUP",
-    year: "2026",
+    quoted: "STARTUP PITCH",
+    year: "WATER MILL CUP 2026",
   },
   {
     type: "title",
