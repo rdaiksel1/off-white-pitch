@@ -298,86 +298,63 @@ ul.bullets li::before {
   margin: 0 0 0.6rem;
 }
 
-/* HUD */
-#hud {
+/* Next button */
+#btn-next {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  right: 4vw;
+  bottom: 4vh;
   z-index: 10;
-  padding: 0 4vw 3vh;
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-  pointer-events: none;
-}
-
-#progress-track {
-  width: 100%;
-  height: 3px;
-  background: var(--border);
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-#progress-fill {
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-#hud-row {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  pointer-events: auto;
-}
-
-.nav-btn {
+  gap: 0.6rem;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--border);
   color: var(--fg);
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  font-size: 1.1rem;
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s, transform 0.15s;
+  transition: background 0.2s, transform 0.15s, opacity 0.2s;
   backdrop-filter: blur(6px);
 }
 
-.nav-btn:hover {
+#btn-next:hover {
   background: rgba(255, 255, 255, 0.14);
   transform: translateY(-1px);
 }
 
-.nav-btn:active {
+#btn-next:active {
   transform: translateY(0);
 }
 
-#slide-counter {
-  font-variant-numeric: tabular-nums;
+#btn-next:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.key-hint {
+  font-size: 0.72rem;
+  font-weight: 600;
   color: var(--fg-dim);
-  font-size: 0.9rem;
-  min-width: 4.5rem;
-  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.15rem 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
-/* Invisible click zones for advancing slides */
-#click-zone-prev,
-#click-zone-next {
-  position: absolute;
-  top: 0;
-  bottom: 12vh;
-  width: 22%;
-  z-index: 5;
-  cursor: pointer;
+#deck.on-brand #btn-next {
+  background: rgba(17, 17, 17, 0.06);
+  border-color: rgba(17, 17, 17, 0.15);
+  color: #111;
 }
 
-#click-zone-prev { left: 0; }
-#click-zone-next { right: 0; }
+#deck.on-brand #btn-next:hover {
+  background: rgba(17, 17, 17, 0.12);
+}
+
+#deck.on-brand .key-hint {
+  color: #6b6558;
+  border-color: rgba(17, 17, 17, 0.15);
+}

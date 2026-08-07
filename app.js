@@ -4,14 +4,9 @@
 // ---------------------------------------------------------------------------
 
 (function () {
+  const deck = document.getElementById("deck");
   const viewport = document.getElementById("slide-viewport");
-  const counterEl = document.getElementById("slide-counter");
-  const progressFill = document.getElementById("progress-fill");
-  const btnPrev = document.getElementById("btn-prev");
   const btnNext = document.getElementById("btn-next");
-  const btnFullscreen = document.getElementById("btn-fullscreen");
-  const zonePrev = document.getElementById("click-zone-prev");
-  const zoneNext = document.getElementById("click-zone-next");
 
   let current = 0;
   let slideEls = [];
@@ -145,9 +140,7 @@
       }
     });
 
-    counterEl.textContent = `${current + 1} / ${slideEls.length}`;
-    progressFill.style.width = `${((current + 1) / slideEls.length) * 100}%`;
-    btnPrev.disabled = current === 0;
+    deck.classList.toggle("on-brand", !!SLIDES[current].brand);
     btnNext.disabled = current === slideEls.length - 1;
   }
 
@@ -168,10 +161,6 @@
 
   // --- events ---
   btnNext.addEventListener("click", next);
-  btnPrev.addEventListener("click", prev);
-  btnFullscreen.addEventListener("click", toggleFullscreen);
-  zoneNext.addEventListener("click", next);
-  zonePrev.addEventListener("click", prev);
 
   window.addEventListener("keydown", (e) => {
     if (["ArrowRight", "ArrowDown", " ", "PageDown", "n", "N"].includes(e.key)) {
