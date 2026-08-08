@@ -59,15 +59,15 @@ const SLIDES = [
   {
     type: "table",
     title: "Market Opportunity",
-    caption: "Bottom-up. New York City alone.",
+    caption: "Bottom-up, at $50 a year. Everybody goes.",
     columns: ["", "", ""],
     rows: [
-      ["Residents + annual visitors", "73.5M", "people who need a bathroom"],
-      ["Realistic member capture", "1%", "735K members"],
-      ["Subscription at $50/year", "$37M", "ARR, one city"],
-      ["Top 10 US metros", "$370M", "ARR, subscription only"],
-      ["Data layer", "+$150M", "foot traffic + health"],
-      ["Total addressable", "$520M", "before we leave the top 10"],
+      ["New York City beachhead", "$37M", "1% of 73.5M residents + visitors"],
+      ["Top 10 US metros", "$370M", "where we are by year five"],
+      ["Every urban adult in America", "$10.5B", "210M people"],
+      ["Every urban adult on earth", "$105B", "2.1B people, no translation needed"],
+      ["Data layer", "+$25B", "foot traffic + health"],
+      ["Total addressable market", "$130B", ""],
     ],
   },
   {
