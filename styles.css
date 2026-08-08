@@ -327,6 +327,53 @@ ul.bullets li::before {
   margin: 0 0 0.6rem;
 }
 
+/* Logo + flag graphics */
+.slide-content.has-logo {
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+}
+
+.logo-wrap {
+  flex: 0 0 auto;
+}
+
+.logo-svg {
+  width: clamp(120px, 18vw, 240px);
+  height: auto;
+  display: block;
+}
+
+.flag-bg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.flag-bg .flag-svg {
+  width: 78vw;
+  max-width: 1200px;
+  height: auto;
+  opacity: 0.16;
+}
+
+.closing-content {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 800px) {
+  .slide-content.has-logo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
+
 /* Next button */
 #btn-next {
   position: absolute;

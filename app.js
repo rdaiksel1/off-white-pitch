@@ -10,6 +10,84 @@
   let current = 0;
   let slideEls = [];
 
+  // --- Americana graphics -------------------------------------------------
+  const RED = "#b22234";
+  const NAVY = "#3c3b6e";
+
+  function starPath(cx, cy, r) {
+    let d = "";
+    for (let i = 0; i < 10; i++) {
+      const rad = i % 2 === 0 ? r : r * 0.382;
+      const a = (Math.PI / 5) * i - Math.PI / 2;
+      d += (i ? "L" : "M") + (cx + rad * Math.cos(a)).toFixed(2) + " " + (cy + rad * Math.sin(a)).toFixed(2);
+    }
+    return d + "Z";
+  }
+
+  function flagStars(x, y, w, h) {
+    let out = "";
+    const cols = 11;
+    const rows = 9;
+    for (let r = 0; r < rows; r++) {
+      const n = r % 2 === 0 ? 6 : 5;
+      for (let c = 0; c < n; c++) {
+        const cx = x + (w / cols) * (r % 2 === 0 ? c * 2 + 1 : c * 2 + 2);
+        const cy = y + (h / rows) * (r + 0.5);
+        out += `<path d="${starPath(cx, cy, Math.min(w / cols, h / rows) * 0.62)}" fill="#fff"/>`;
+      }
+    }
+    return out;
+  }
+
+  function flagSVG(w, h, id) {
+    const stripe = h / 13;
+    let stripes = "";
+    for (let i = 0; i < 13; i++) {
+      if (i % 2 === 0) {
+        stripes += `<rect x="0" y="${(i * stripe).toFixed(2)}" width="${w}" height="${stripe.toFixed(2)}" fill="${RED}"/>`;
+      }
+    }
+    const cw = w * 0.4;
+    const ch = stripe * 7;
+    return `<svg class="flag-svg" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="American flag">
+      <rect width="${w}" height="${h}" fill="#fff"/>
+      ${stripes}
+      <rect width="${cw}" height="${ch}" fill="${NAVY}"/>
+      ${flagStars(0, 0, cw, ch)}
+    </svg>`;
+  }
+
+  function toiletFlagSVG() {
+    const TX = 22,
+      TY = 24,
+      TW = 64,
+      TH = 82;
+    const sh = TH / 13;
+    const cw = TW * 0.42;
+    const ch = sh * 7;
+    let stripes = "";
+    for (let i = 0; i < 13; i++) {
+      if (i % 2 === 0) {
+        stripes += `<rect x="${TX}" y="${(TY + i * sh).toFixed(2)}" width="${TW}" height="${sh.toFixed(2)}" fill="${RED}"/>`;
+      }
+    }
+    return `<svg class="logo-svg" viewBox="0 0 215 205" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Liberty Pass logo: a toilet flying the American flag">
+      <path d="M88 112 C88 146, 100 168, 104 182 L156 182 C161 166, 174 144, 176 112 Z" fill="#fff" stroke="${NAVY}" stroke-width="5" stroke-linejoin="round"/>
+      <rect x="96" y="180" width="72" height="14" rx="4" fill="${NAVY}"/>
+      <ellipse cx="132" cy="112" rx="56" ry="22" fill="#fff" stroke="${NAVY}" stroke-width="5"/>
+      <ellipse cx="132" cy="112" rx="38" ry="12" fill="none" stroke="${NAVY}" stroke-width="3" opacity="0.35"/>
+      <defs><clipPath id="lp-tank"><rect x="${TX}" y="${TY}" width="${TW}" height="${TH}" rx="5"/></clipPath></defs>
+      <g clip-path="url(#lp-tank)">
+        <rect x="${TX}" y="${TY}" width="${TW}" height="${TH}" fill="#fff"/>
+        ${stripes}
+        <rect x="${TX}" y="${TY}" width="${cw.toFixed(2)}" height="${ch.toFixed(2)}" fill="${NAVY}"/>
+        ${flagStars(TX, TY, cw, ch)}
+      </g>
+      <rect x="${TX}" y="${TY}" width="${TW}" height="${TH}" rx="5" fill="none" stroke="${NAVY}" stroke-width="5"/>
+      <rect x="${TX - 7}" y="11" width="${TW + 14}" height="14" rx="5" fill="${NAVY}"/>
+    </svg>`;
+  }
+
   function renderSlideContent(slide) {
     switch (slide.type) {
       case "title":
@@ -24,10 +102,13 @@
             </div>`;
         }
         return `
-          <div class="slide-content">
-            ${slide.eyebrow ? `<p class="eyebrow">${slide.eyebrow}</p>` : ""}
-            <h1 class="slide-title">${slide.title}</h1>
-            ${slide.subtitle ? `<p class="subtitle">${slide.subtitle}</p>` : ""}
+          <div class="slide-content${slide.graphic ? " has-logo" : ""}">
+            ${slide.graphic === "toilet-flag" ? `<div class="logo-wrap">${toiletFlagSVG()}</div>` : ""}
+            <div>
+              ${slide.eyebrow ? `<p class="eyebrow">${slide.eyebrow}</p>` : ""}
+              <h1 class="slide-title">${slide.title}</h1>
+              ${slide.subtitle ? `<p class="subtitle">${slide.subtitle}</p>` : ""}
+            </div>
           </div>`;
 
       case "bullets":
@@ -128,7 +209,8 @@
 
       case "closing":
         return `
-          <div class="slide-content">
+          ${slide.graphic === "flag" ? `<div class="flag-bg">${flagSVG(190, 100)}</div>` : ""}
+          <div class="slide-content closing-content">
             <h1 class="closing-title">${slide.title}</h1>
             ${slide.subtitle ? `<p class="subtitle">${slide.subtitle}</p>` : ""}
           </div>`;

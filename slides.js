@@ -25,6 +25,7 @@ const SLIDES = [
     eyebrow: "Introducing",
     title: "Liberty Pass",
     subtitle: "Every bathroom in America. One tap. No questions asked.",
+    graphic: "toilet-flag",
   },
   {
     type: "bullets",
@@ -59,36 +60,38 @@ const SLIDES = [
   {
     type: "table",
     title: "Market Opportunity",
-    caption: "Bottom-up, at $50 a year. Everybody goes.",
+    caption: "Bottom-up at $50 a year, 100% capture. Everybody goes.",
     columns: ["", "", ""],
     rows: [
-      ["New York City beachhead", "$37M", "1% of 73.5M residents + visitors"],
-      ["Top 10 US metros", "$370M", "where we are by year five"],
+      ["New York City", "$3.7B", "73.5M residents + visitors"],
+      ["Top 10 US metros", "$18B", "360M people"],
       ["Every urban adult in America", "$10.5B", "210M people"],
       ["Every urban adult on earth", "$105B", "2.1B people, no translation needed"],
-      ["Data layer", "+$25B", "foot traffic + health"],
+      ["Data layer", "+$25B", "three streams, next slide"],
       ["Total addressable market", "$130B", ""],
     ],
   },
   {
-    type: "twoColBullets",
+    type: "bullets",
     title: "Business Model & Pricing",
-    left: {
-      heading: "Revenue one: members",
-      bullets: [
-        "$5 per month, or $50 per year",
-        "The $5 returns as credit at any partner venue",
-        "Net cost to member: nothing. Churn near zero.",
-      ],
-    },
-    right: {
-      heading: "Revenue two: data",
-      bullets: [
-        "Verified foot traffic sold to capital markets",
-        "Opt-in population health signal for CDC and NGOs",
-        "Consented cohorts for pharma Phase 4 studies",
-      ],
-    },
+    bullets: [
+      "$5 per month, or $50 per year. Unlimited access to the entire network.",
+      "The $5 comes back as credit at any partner venue — net cost to the member is nothing.",
+      "Venues are paid per scan on a room they already clean. Zero capex, pure margin.",
+      "And every scan produces something far more valuable than the $5.",
+    ],
+  },
+  {
+    type: "table",
+    title: "Three Data Streams",
+    caption: "The subscription buys the network. The network is the product.",
+    numCol: 0,
+    columns: ["Stream", "Buyer", "What we sell"],
+    rows: [
+      ["Foot traffic", "Hedge funds, banks", "Verified visits — same-store traffic weeks before earnings"],
+      ["Public health", "Government, NGOs", "Population-level stool and urinary analysis — outbreak detection in real time"],
+      ["Biomarkers", "Pharma", "Phase 4 post-market outcomes at a fraction of clinical trial cost"],
+    ],
   },
   {
     type: "bullets",
@@ -103,20 +106,21 @@ const SLIDES = [
   {
     type: "table",
     title: "Projected Financials",
-    caption: "Members drive revenue one. Density unlocks revenue two.",
+    caption: "Membership funds the build. Data compounds on top of it.",
     numCol: 2,
     columns: ["Year", "Members", "Revenue"],
     rows: [
-      ["Year 1", "50K", "$2.5M"],
-      ["Year 2", "250K", "$13M"],
-      ["Year 3", "1M", "$65M"],
-      ["Year 4", "2.5M", "$160M"],
-      ["Year 5", "4M", "$300M"],
+      ["Year 1", "1M", "$200M"],
+      ["Year 2", "15M", "$3B"],
+      ["Year 3", "90M", "$14B"],
+      ["Year 4", "350M", "$50B"],
+      ["Year 5", "700M", "$98B"],
     ],
   },
   {
     type: "closing",
     title: "Liberty Pass",
     subtitle: "The freedom to go.",
+    graphic: "flag",
   },
 ];
