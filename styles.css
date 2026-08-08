@@ -3,8 +3,8 @@
   --bg-2: #eef2f3;
   --fg: #14181a;
   --fg-dim: #7d8b91;
-  --accent: #2f7d95;
-  --accent-2: #14181a;
+  --accent: #1b3a6b;
+  --accent-2: #b22234;
   --danger: #d92b2b;
   --border: rgba(20, 24, 26, 0.1);
   --radius: 18px;
@@ -170,8 +170,48 @@ ul.bullets li::before {
 .stat-block .stat-value {
   font-size: clamp(2.6rem, 8vw, 6rem);
   font-weight: 800;
-  color: var(--accent);
+  color: var(--accent-2);
   line-height: 1;
+}
+
+/* Data table */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: clamp(0.95rem, 1.9vw, 1.35rem);
+}
+
+.data-table th {
+  text-align: left;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  font-weight: 600;
+  padding: 0 1.5rem 0.9rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.data-table td {
+  padding: 0.95rem 1.5rem 0.95rem 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--fg);
+  font-weight: 500;
+}
+
+.data-table td.num {
+  color: var(--accent-2);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table tr:last-child td.num {
+  font-size: 1.15em;
 }
 
 .stat-block .stat-label {

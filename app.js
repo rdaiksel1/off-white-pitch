@@ -76,6 +76,33 @@
             ${slide.caption ? `<p class="caption">${slide.caption}</p>` : ""}
           </div>`;
 
+      case "table":
+        return `
+          <div class="slide-content">
+            <h2 class="section-title">${slide.title}</h2>
+            <table class="data-table">
+              ${
+                slide.columns && slide.columns.some((c) => c)
+                  ? `<thead><tr>${slide.columns.map((c) => `<th>${c}</th>`).join("")}</tr></thead>`
+                  : ""
+              }
+              <tbody>
+                ${slide.rows
+                  .map(
+                    (r) =>
+                      `<tr>${r
+                        .map(
+                          (cell, ci) =>
+                            `<td class="${ci === (slide.numCol ?? 1) ? "num" : ""}">${cell}</td>`
+                        )
+                        .join("")}</tr>`
+                  )
+                  .join("")}
+              </tbody>
+            </table>
+            ${slide.caption ? `<p class="caption">${slide.caption}</p>` : ""}
+          </div>`;
+
       case "quote":
         return `
           <div class="slide-content">
