@@ -131,6 +131,8 @@ const SLIDES = [
   {
     type: "team",
     title: "The Team",
+    photo: "assets/team.jpg",
+    photoAlt: "The Liberty Pass founding team",
     members: [
       { role: "CEO", name: "Cliff Weitzman", note: "Founder of Speechify — 60M users" },
       { role: "CSO", name: "Ankit", note: "Founder of Anthrogen — AI-native bio" },
@@ -145,5 +147,13 @@ const SLIDES = [
     title: "Liberty Pass",
     subtitle: "The freedom to go.",
     graphic: "flag",
+  },
+  {
+    type: "qr",
+    eyebrow: "Join the movement",
+    title: "Scan to go.",
+    src: "assets/qr.png",
+    alt: "Scan to join Liberty Pass",
+    subtitle: "libertypass.com",
   },
 ];

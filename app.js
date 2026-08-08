@@ -184,6 +184,15 @@
             ${slide.caption ? `<p class="caption">${slide.caption}</p>` : ""}
           </div>`;
 
+      case "qr":
+        return `
+          <div class="slide-content qr-content">
+            ${slide.eyebrow ? `<p class="eyebrow">${slide.eyebrow}</p>` : ""}
+            <h1 class="closing-title">${slide.title}</h1>
+            <div class="qr-frame"><img src="${slide.src}" alt="${slide.alt || "Scan to join"}" /></div>
+            ${slide.subtitle ? `<p class="subtitle">${slide.subtitle}</p>` : ""}
+          </div>`;
+
       case "team":
         return `
           <div class="slide-content">
