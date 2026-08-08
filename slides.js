@@ -83,12 +83,79 @@ const SLIDES = [
     ],
   },
   {
+    type: "stat",
+    title: "The Subscription",
+    stats: [
+      { value: "$5", label: "Per month" },
+      { value: "$50", label: "Per year" },
+      { value: "$0", label: "What it actually costs you" },
+    ],
+  },
+  {
     type: "bullets",
-    title: "The Business Model",
+    title: "Girl Math",
     bullets: [
-      "Consumer subscription — unlimited access, $14.99/mo.",
-      "Venues take a cut per scan. Pure margin on a room they already have.",
-      "We own the payment rail for the most universal need on earth.",
+      "Your $5 comes back every month as $5 of credit at any venue on the network.",
+      "Spend it on the Starbucks latte you were going to buy anyway.",
+      "The subscription is free. You just have to keep using it.",
+    ],
+  },
+  {
+    type: "twoColBullets",
+    title: "Why The Credit Works",
+    left: {
+      heading: "We don't lose the $5",
+      bullets: [
+        "It is not a discount, it is a routed payment",
+        "It lands in a partner's register, not our P&L",
+        "Venues fund the credit to acquire the customer",
+      ],
+    },
+    right: {
+      heading: "The venue gets more",
+      bullets: [
+        "$5 credit reliably converts to a larger basket",
+        "Guaranteed foot traffic on a room they already clean",
+        "Our churn is their retention. Same customer.",
+      ],
+    },
+  },
+  {
+    type: "bullets",
+    title: "But The Subscription Is Not The Business",
+    bullets: [
+      "Every tap is a verified human, at a known location, at a known minute.",
+      "Nobody scans in and leaves. It is the highest-intent check-in on earth.",
+      "We are not a bathroom company. We are a sensor network with 40 million endpoints.",
+    ],
+  },
+  {
+    type: "twoColBullets",
+    title: "Revenue Stream Two: Data",
+    left: {
+      heading: "Foot traffic → capital markets",
+      bullets: [
+        "Verified visits, not GPS guesswork",
+        "Same-store traffic nowcasting, weeks before earnings",
+        "The alt-data desks already buy this — worse",
+      ],
+    },
+    right: {
+      heading: "Biometrics → health",
+      bullets: [
+        "Opt-in analysis at the fixture level",
+        "Population health signal for CDC and NGOs",
+        "Longitudinal cohorts for pharma Phase 4",
+      ],
+    },
+  },
+  {
+    type: "bullets",
+    title: "The Phase 4 Arbitrage",
+    bullets: [
+      "Post-market drug surveillance costs pharma millions per study and takes years to enroll.",
+      "We have a consented, longitudinal, real-world cohort that reports in daily — without a clinic visit.",
+      "We sell the same signal for a fraction of the price, and our members get paid to opt in.",
     ],
   },
   {
