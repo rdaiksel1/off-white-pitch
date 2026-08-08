@@ -184,6 +184,29 @@
             ${slide.caption ? `<p class="caption">${slide.caption}</p>` : ""}
           </div>`;
 
+      case "team":
+        return `
+          <div class="slide-content">
+            <h2 class="section-title">${slide.title}</h2>
+            <div class="team-layout">
+              <div class="team-photo media-frame">
+                <img src="${slide.photo}" alt="${slide.photoAlt || "The team"}" />
+              </div>
+              <ul class="team-list">
+                ${slide.members
+                  .map(
+                    (m) => `
+                  <li>
+                    <span class="team-role">${m.role}</span>
+                    <span class="team-name">${m.name}</span>
+                    ${m.note ? `<span class="team-note">${m.note}</span>` : ""}
+                  </li>`
+                  )
+                  .join("")}
+              </ul>
+            </div>
+          </div>`;
+
       case "quote":
         return `
           <div class="slide-content">

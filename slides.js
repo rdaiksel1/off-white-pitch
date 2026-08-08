@@ -97,10 +97,21 @@ const SLIDES = [
     type: "bullets",
     title: "Go To Market",
     bullets: [
+      "The bathroom finder app is free. The door unlock is the paywall — the cheapest CAC in consumer.",
+      "Streak-based rewards. Refer three friends and unlock Liberty Elite: priority access at high-traffic locations and a gold QR badge.",
       "Win one city completely before touching a second. Density is the entire product.",
-      "Sign anchor chains first — coffee and fast casual seed the map in a week.",
-      "Readers are free to the venue. We are asking them to monetize a cost center, not spend.",
+      "Readers are free to the venue. We are asking them to monetize a cost center, not spend on one.",
       "Own the tourist channel: hotels, airports, and rail bundle Liberty Pass into every visitor.",
+    ],
+  },
+  {
+    type: "bullets",
+    title: "Content Strategy",
+    bullets: [
+      "City Gut Reports — an annual ranked list of the best and worst bathroom cities in America.",
+      "Every mayor in the country will fight us about their ranking, in public, for free.",
+      "America's Gut Index — the nation's stool, pooled. The only health index nobody can look away from.",
+      "The content is the top of the funnel. The data is the bottom line.",
     ],
   },
   {
@@ -115,6 +126,20 @@ const SLIDES = [
       ["Year 3", "90M", "$14B"],
       ["Year 4", "350M", "$50B"],
       ["Year 5", "700M", "$98B"],
+    ],
+  },
+  {
+    type: "team",
+    title: "The Team",
+    photo: "assets/team.jpg",
+    photoAlt: "The Liberty Pass founding team",
+    members: [
+      { role: "CEO", name: "Cliff Weitzman", note: "Founder of Speechify — 60M users" },
+      { role: "CSO", name: "Ankit", note: "Founder of Anthrogen — AI-native bio" },
+      { role: "CFO", name: "Mike Anagnos" },
+      { role: "CRO", name: "Anna Yu" },
+      { role: "CPO", name: "Rowan Daiksel" },
+      { role: "CMO", name: "Edgar Sze" },
     ],
   },
   {

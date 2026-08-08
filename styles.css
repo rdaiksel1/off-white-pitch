@@ -327,6 +327,78 @@ ul.bullets li::before {
   margin: 0 0 0.6rem;
 }
 
+/* Team slide */
+.team-layout {
+  display: grid;
+  grid-template-columns: 0.95fr 1fr;
+  gap: 3.5vw;
+  align-items: center;
+  width: 100%;
+}
+
+.team-photo {
+  margin: 0;
+}
+
+.team-photo img {
+  max-height: 52vh;
+  object-fit: cover;
+}
+
+.team-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.team-list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.9rem;
+  align-items: baseline;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.team-list li:last-child {
+  border-bottom: none;
+}
+
+.team-role {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.team-name {
+  font-size: clamp(1rem, 1.9vw, 1.45rem);
+  font-weight: 700;
+  color: var(--fg);
+}
+
+.team-note {
+  grid-column: 2;
+  font-size: 0.9rem;
+  color: var(--fg-dim);
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 900px) {
+  .team-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .team-photo img {
+    max-height: 30vh;
+  }
+}
+
 /* Logo + flag graphics */
 .slide-content.has-logo {
   display: flex;
