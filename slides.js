@@ -93,11 +93,11 @@ const SLIDES = [
   },
   {
     type: "bullets",
-    title: "Girl Math",
+    title: "The Subscription Pays For Itself",
     bullets: [
       "Your $5 comes back every month as $5 of credit at any venue on the network.",
-      "Spend it on the Starbucks latte you were going to buy anyway.",
-      "The subscription is free. You just have to keep using it.",
+      "Spend it on the coffee you were going to buy anyway.",
+      "Net cost to the member: nothing. They just have to keep using it.",
     ],
   },
   {
