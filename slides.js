@@ -12,6 +12,15 @@ const SLIDES = [
     year: "HAPPENED TO YOU?",
   },
   {
+    type: "bullets",
+    title: "America Is Shackled By Its Toilets",
+    bullets: [
+      "In 1965 we passed the Highway Beautification Act to make America beautiful to look at.",
+      "Sixty years later you still cannot find a place to go.",
+      "This is the infrastructure bill nobody had the courage to write.",
+    ],
+  },
+  {
     type: "title",
     eyebrow: "Introducing",
     title: "Throne Pass",
@@ -71,15 +80,6 @@ const SLIDES = [
       "America has roughly as many accessible bathrooms as it has Starbucks — because they are largely the same buildings.",
       "Every retailer already knows the bathroom is what gets you in the door. They just never learned to charge for it.",
       "2–4 million toilets sit behind those doors. We are not building supply. We are unlocking it.",
-    ],
-  },
-  {
-    type: "bullets",
-    title: "America Is Shackled By Its Toilets",
-    bullets: [
-      "In 1965 we passed the Highway Beautification Act to make America beautiful to look at.",
-      "Sixty years later you still cannot find a place to go.",
-      "Throne Pass is the infrastructure bill nobody had the courage to write.",
     ],
   },
   {
