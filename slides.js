@@ -59,6 +59,22 @@ const SLIDES = [
   },
   {
     type: "table",
+    title: "Seven Streams Of Income",
+    caption: "One dollar in. Seven ways out.",
+    numCol: 0,
+    columns: ["Stream", "Buyer", ""],
+    rows: [
+      ["Public health", "HHS, cities", "America's Gut Index, sold via Starbridge"],
+      ["Alternative data", "Hedge funds", "Verified foot traffic"],
+      ["Biotech", "Pharma", "Disease prevalence"],
+      ["Toilet paper ads", "AppLovin, Google", "QR on every sheet"],
+      ["Subscription", "Members", "$1 a year"],
+      ["Partner credit", "Local business", "Spend it next door"],
+      ["Benefits", "Cards, airlines", "A perk in every wallet"],
+    ],
+  },
+  {
+    type: "table",
     title: "Market Opportunity",
     caption: "Bottom-up, 100% capture. Everybody goes.",
     columns: ["", "", ""],
