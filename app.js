@@ -188,10 +188,14 @@
         return `
           <div class="slide-content">
             <h2 class="section-title">${slide.title}</h2>
-            <div class="team-layout">
-              <div class="team-photo media-frame">
+            <div class="team-layout${slide.photo ? "" : " no-photo"}">
+              ${
+                slide.photo
+                  ? `<div class="team-photo media-frame">
                 <img src="${slide.photo}" alt="${slide.photoAlt || "The team"}" />
-              </div>
+              </div>`
+                  : ""
+              }
               <ul class="team-list">
                 ${slide.members
                   .map(

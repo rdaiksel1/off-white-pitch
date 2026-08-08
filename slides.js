@@ -131,8 +131,6 @@ const SLIDES = [
   {
     type: "team",
     title: "The Team",
-    photo: "assets/team.jpg",
-    photoAlt: "The Liberty Pass founding team",
     members: [
       { role: "CEO", name: "Cliff Weitzman", note: "Founder of Speechify — 60M users" },
       { role: "CSO", name: "Ankit", note: "Founder of Anthrogen — AI-native bio" },

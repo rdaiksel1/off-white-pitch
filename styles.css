@@ -336,6 +336,11 @@ ul.bullets li::before {
   width: 100%;
 }
 
+.team-layout.no-photo {
+  grid-template-columns: 1fr;
+  max-width: 800px;
+}
+
 .team-photo {
   margin: 0;
 }
