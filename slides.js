@@ -15,7 +15,7 @@ const SLIDES = [
     type: "bullets",
     title: "America Is Shackled By Its Toilets",
     bullets: [
-      "In 1965 we passed the Highway Beautification Act to make America beautiful to look at.",
+      "In 1965 President Lyndon Johnson passed the Highway Beautification Act to make America beautiful to look at.",
       "Sixty years later you still cannot find a place to go.",
       "This is the infrastructure bill nobody had the courage to write.",
     ],
