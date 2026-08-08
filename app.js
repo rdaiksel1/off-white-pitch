@@ -18,7 +18,7 @@
             <div class="slide-content brand-content">
               <div class="brand-stripe"></div>
               <h1 class="brand-title">
-                <span class="brand-quote">&#8220;${slide.quoted}&#8221;</span>
+                <span class="brand-quote">${slide.quoted}</span>
                 <span class="brand-year">${slide.year}</span>
               </h1>
             </div>`;

@@ -1,12 +1,12 @@
 :root {
-  --bg: #f2efe9;
-  --bg-2: #e8e3d9;
-  --fg: #111111;
-  --fg-dim: #6b6558;
-  --accent: #ff6a13;
-  --accent-2: #111111;
+  --bg: #fbfcfc;
+  --bg-2: #eef2f3;
+  --fg: #14181a;
+  --fg-dim: #7d8b91;
+  --accent: #2f7d95;
+  --accent-2: #14181a;
   --danger: #d92b2b;
-  --border: rgba(17, 17, 17, 0.12);
+  --border: rgba(20, 24, 26, 0.1);
   --radius: 18px;
   font-size: 16px;
 }
@@ -30,7 +30,10 @@ html, body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: var(--bg);
+  background:
+    radial-gradient(ellipse at 25% 15%, #ffffff 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 85%, #e6edef 0%, transparent 60%),
+    var(--bg);
 }
 
 #slide-viewport {
@@ -246,15 +249,10 @@ ul.bullets li::before {
 }
 
 .brand-stripe {
-  width: 140px;
-  height: 10px;
-  background: repeating-linear-gradient(
-    45deg,
-    #111 0px,
-    #111 10px,
-    var(--bg) 10px,
-    var(--bg) 20px
-  );
+  width: 120px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 2px;
 }
 
 .brand-title {
@@ -270,16 +268,17 @@ ul.bullets li::before {
 }
 
 .brand-quote {
-  font-size: clamp(2.2rem, 6.5vw, 4.6rem);
-  letter-spacing: -0.01em;
+  font-size: clamp(2.2rem, 7vw, 5.2rem);
+  letter-spacing: -0.02em;
   line-height: 1;
 }
 
 .brand-year {
-  font-size: clamp(1.1rem, 2.6vw, 1.8rem);
-  letter-spacing: 0.3em;
-  color: var(--fg-dim);
-  font-weight: 600;
+  font-size: clamp(2.2rem, 7vw, 5.2rem);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--accent);
+  font-weight: 800;
 }
 
 .closing-title {
