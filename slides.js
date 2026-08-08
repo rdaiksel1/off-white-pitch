@@ -48,11 +48,38 @@ const SLIDES = [
   },
   {
     type: "stat",
-    title: "The Market",
+    title: "The Demand",
     stats: [
-      { value: "$14.99", label: "Per member, per month" },
-      { value: "1M+", label: "US venues with a bathroom" },
-      { value: "100%", label: "Of humans, addressable" },
+      { value: "65M", label: "Visitors to NYC / year" },
+      { value: "6x", label: "Bathroom trips per person, per day" },
+      { value: "390M", label: "Trips per year, one city" },
+    ],
+  },
+  {
+    type: "stat",
+    title: "The Supply",
+    stats: [
+      { value: "25K", label: "Public customer-accessible bathrooms, entire US" },
+      { value: "20K", label: "Starbucks locations, US" },
+      { value: "0", label: "Public toilets not owned by a business" },
+    ],
+  },
+  {
+    type: "bullets",
+    title: "Bathrooms Drive Business",
+    bullets: [
+      "America has roughly as many accessible bathrooms as it has Starbucks — because they are largely the same buildings.",
+      "Every retailer already knows the bathroom is what gets you in the door. They just never learned to charge for it.",
+      "2–4 million toilets sit behind those doors. We are not building supply. We are unlocking it.",
+    ],
+  },
+  {
+    type: "bullets",
+    title: "America Is Shackled By Its Toilets",
+    bullets: [
+      "In 1965 we passed the Highway Beautification Act to make America beautiful to look at.",
+      "Sixty years later you still cannot find a place to go.",
+      "Throne Pass is the infrastructure bill nobody had the courage to write.",
     ],
   },
   {
