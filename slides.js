@@ -60,7 +60,7 @@ const SLIDES = [
   {
     type: "table",
     title: "Market Opportunity",
-    caption: "Bottom-up at $50 a year, 100% capture. Everybody goes.",
+    caption: "Bottom-up, 100% capture. Everybody goes.",
     columns: ["", "", ""],
     rows: [
       ["New York City", "$3.7B", "73.5M residents + visitors"],
@@ -75,10 +75,10 @@ const SLIDES = [
     type: "bullets",
     title: "Business Model & Pricing",
     bullets: [
-      "$5 per month, or $50 per year. Unlimited access to the entire network.",
-      "The $5 comes back as credit at any partner venue — net cost to the member is nothing.",
+      "$1 per year. Unlimited access to every bathroom on the network.",
+      "Priced to be irresistible, not profitable. The dollar is a consent layer, not a revenue line.",
       "Venues are paid per scan on a room they already clean. Zero capex, pure margin.",
-      "And every scan produces something far more valuable than the $5.",
+      "By 2046, 88% of revenue comes from what the network knows — not what members pay.",
     ],
   },
   {
@@ -117,15 +117,15 @@ const SLIDES = [
   {
     type: "table",
     title: "Projected Financials",
-    caption: "Membership funds the build. Data compounds on top of it.",
+    caption: "EBITDA positive 2032. Free-cash-flow positive 2033. $82M of external capital, ever.",
     numCol: 2,
-    columns: ["Year", "Members", "Revenue"],
+    columns: ["Year", "Members", "Revenue", "EBITDA"],
     rows: [
-      ["Year 1", "1M", "$200M"],
-      ["Year 2", "15M", "$3B"],
-      ["Year 3", "90M", "$14B"],
-      ["Year 4", "350M", "$50B"],
-      ["Year 5", "700M", "$98B"],
+      ["2027", "0.2M", "$3M", "($13M)"],
+      ["2032", "18M", "$139M", "$7M"],
+      ["2037", "108M", "$1.07B", "$386M"],
+      ["2041", "234M", "$2.45B", "$984M"],
+      ["2046", "412M", "$3.55B", "$1.28B"],
     ],
   },
   {
